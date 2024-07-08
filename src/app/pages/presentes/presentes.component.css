@@ -1,8 +1,9 @@
 .card-presentes{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   row-gap: 16px;
+  column-gap: 16px;
   margin-bottom: 40px;
 }
 
