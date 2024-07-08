@@ -1,7 +1,7 @@
 <div class="card">
-  <mat-card>
+  <mat-card class="teste">
     <mat-card-header>
-      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-title class="titulo"> Shiba Inu </mat-card-title>
     </mat-card-header>
     <img
       mat-card-image
@@ -9,15 +9,15 @@
       alt="Photo of a Shiba Inu"
     />
     <mat-card-content>
-      <p>
+      <p class="fonte-casamento-cursiva">
         The Shiba Inu is the smallest of the six original and distinct spitz
         breeds of dog from Japan. A small, agile dog that copes very well with
         mountainous terrain, the Shiba Inu was originally bred for hunting.
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <p class="card-preco">R$ 500,00</p>
-      <button (click)="openModalPix()" class="card-button" mat-raised-button>
+      <p class="card-preco">{{ preco | currency : "BRL" }}</p>
+      <button (click)="openModalPix()" class="button-montserrat" mat-raised-button>
         PRESENTEAR <mat-icon color="warn">favorite</mat-icon>
       </button>
     </mat-card-actions>

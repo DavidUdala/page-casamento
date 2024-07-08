@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalPixComponent } from '../modal-pix/modal-pix.component';
 
@@ -8,6 +8,7 @@ import { ModalPixComponent } from '../modal-pix/modal-pix.component';
   styleUrls: ['./card-presente.component.css']
 })
 export class CardPresenteComponent {
+  @Input() preco: number = 0;
   constructor(public dialog: MatDialog) { }
 
   openModalPix() {

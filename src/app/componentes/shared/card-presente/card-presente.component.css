@@ -1,35 +1,42 @@
-.card{
+.card {
   display: flex;
   justify-content: center;
+  font-family: "Montserrat", sans-serif;
 }
-mat-card{
+
+.teste {
   width: 300px;
 }
 
-mat-card-header{
-  justify-content: center;
+@media (max-width: 480px) {
+  .teste {
+    width: 100px;
+  }
 }
-/* .card-presente {
-   max-width: 320px;
-   margin-top: 10%;
- }*/
 
- /* mat-card-content {
-   display: flex;
-   align-items: center;
-   gap: 16px;
- } */
+@media (max-width: 1366px) {
+  .teste {
+    width: 400px;
+  }
+}
 
- .card-button {
-   background-color: #D6DBD4;
-   color: black;
- }
+mat-card-header {
+  justify-content: center;
+  background-color: #D6DBD4;
 
- mat-card-actions {
-   display: flex;
-   justify-content: space-evenly;
- }
+}
 
- .card-preco {
-   font-weight: 800;
- }
+mat-card-actions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-preco {
+  font-weight: 800;
+}
+
+
+.titulo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}

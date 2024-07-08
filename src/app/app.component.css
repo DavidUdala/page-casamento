@@ -6,7 +6,13 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+.fonte-casamento-cursiva {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
 }
 
 

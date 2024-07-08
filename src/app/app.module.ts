@@ -1,9 +1,12 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './componentes/shared/header/header.component';
+
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -19,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ModalPixComponent } from './componentes/shared/modal-pix/modal-pix.component';
 
 
+registerLocaleData(ptBr);
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +44,7 @@ import { ModalPixComponent } from './componentes/shared/modal-pix/modal-pix.comp
     MatCardModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
