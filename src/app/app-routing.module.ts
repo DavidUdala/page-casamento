@@ -6,7 +6,8 @@ import { PresentesComponent } from './pages/presentes/presentes.component';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
-  { path: 'presentes', component: PresentesComponent }
+  { path: 'presentes', component: PresentesComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

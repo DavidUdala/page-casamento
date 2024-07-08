@@ -12,7 +12,5 @@ export class CardPresenteComponent {
 
   openModalPix() {
     this.dialog.open(ModalPixComponent);
-
   }
-
 }
