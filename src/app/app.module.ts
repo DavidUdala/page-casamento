@@ -12,6 +12,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { BannerComponent } from './componentes/shared/banner/banner.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { PresentesComponent } from './pages/presentes/presentes.component';
+import { CardPresenteComponent } from './componentes/shared/card-presente/card-presente.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     HeaderComponent,
     BannerComponent,
     InicioComponent,
+    PresentesComponent,
+    CardPresenteComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     MatButtonModule,
     MatIconModule,
     MatSidenavModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
