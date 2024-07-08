@@ -1,10 +1,26 @@
-.card-presentes{
+.presentes_titulo{
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  row-gap: 16px;
-  column-gap: 16px;
-  margin-bottom: 40px;
 }
 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
+.item {
+  flex: 1 1 calc(33.333% - 10px);
+  box-sizing: border-box;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .item {
+    flex: 1 1 calc(50% - 10px);
+  }
+}
+@media (max-width: 480px) {
+  .item {
+    flex: 1 1 calc(100% - 10px);
+  }
+}
