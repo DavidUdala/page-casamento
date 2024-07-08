@@ -1,0 +1,22 @@
+.app-header {
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+  }
+
+  .mat-toolbar {
+    background: #D6DBD4;
+  }
+
+  .fonte-casamento-cursiva {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 420px) {
+    .menu {
+      justify-content: flex-start;
+    }
+  }
+}
