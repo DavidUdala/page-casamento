@@ -4,20 +4,16 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.teste {
-  width: 300px;
+mat-card {
+  max-width: 300px;
 }
 
 @media (max-width: 480px) {
-  .teste {
-    width: 100px;
-  }
+
 }
 
 @media (max-width: 1366px) {
-  .teste {
-    width: 400px;
-  }
+
 }
 
 mat-card-header {
