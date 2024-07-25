@@ -20,7 +20,13 @@ import { CardPresenteComponent } from './componentes/shared/card-presente/card-p
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalPixComponent } from './componentes/shared/modal-pix/modal-pix.component';
-
+import { PresencaComponent } from './pages/presenca/presenca.component';
+import { MatInputModule } from '@angular/material/input';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule } from '@angular/material/radio';
+import { MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxModule } from '@angular/material/checkbox';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -32,6 +38,7 @@ registerLocaleData(ptBr);
     PresentesComponent,
     CardPresenteComponent,
     ModalPixComponent,
+    PresencaComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,9 +49,22 @@ registerLocaleData(ptBr);
     MatSidenavModule,
     AppRoutingModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatRadioModule,
+    FormsModule,
+    MatCheckboxModule
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },
+    { provide: MAT_RADIO_DEFAULT_OPTIONS, useValue: { color: 'red' } },
+    { provide: MAT_CHECKBOX_DEFAULT_OPTIONS, useValue: { color: 'red' } }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

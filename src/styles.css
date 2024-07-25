@@ -11,3 +11,22 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 
+/* Define a cor personalizada para o rótulo do mat-form-field */
+.mat-form-field-appearance-fill .mat-form-field-label {
+  color: #4CAF50 !important; /* Verde para o rótulo */
+}
+
+/* Define a cor personalizada para o sublinhado do mat-form-field */
+.mat-form-field-appearance-fill .mat-form-field-underline {
+  background-color: #4CAF50 !important; /* Verde para o sublinhado */
+}
+
+/* Define a cor personalizada para o erro */
+.mat-error {
+  color: #F44336 !important; /* Vermelho para erros (opcional) */
+}
+
+/* Opcional: Define a cor para o ícone do campo de erro */
+.mat-form-field .mat-form-field-infix .mat-form-field-subscript-wrapper .mat-form-field-hint {
+  color: #4CAF50 !important; /* Verde para dicas e mensagens */
+}

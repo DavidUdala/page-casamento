@@ -1,0 +1,60 @@
+<h3 class="titulo">CONFIRMAÇÃO DE PRESENÇA</h3>
+
+<section class="container">
+  <form [formGroup]="confirmationForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="name" required />
+      <mat-error *ngIf="confirmationForm.get('name')?.errors">
+        Nome é obrigatório
+      </mat-error>
+    </mat-form-field>
+
+
+    <p>Comparecerá ao casamento?</p>
+    <mat-radio-group formControlName="comparecera" aria-label="Select an option">
+      <mat-radio-button value="true">Sim</mat-radio-button>
+      <mat-radio-button value="false">Não</mat-radio-button>
+    </mat-radio-group>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Quantidade de adultos, incluindo voce:</mat-label>
+      <mat-select formControlName="quantidadeAdultos" required>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+      </mat-select>
+      <mat-error *ngIf="confirmationForm.get('quantidadeAdultos')?.errors">
+        Escolha uma opção
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Quantidade de crianças:</mat-label>
+      <mat-select formControlName="quantidadeCriancas" required>
+        <mat-option value="1">1</mat-option>
+        <mat-option value="2">2</mat-option>
+        <mat-option value="3">3</mat-option>
+        <mat-option value="4">4</mat-option>
+        <mat-option value="5">5</mat-option>
+      </mat-select>
+      <mat-error *ngIf="confirmationForm.get('quantidadeCriancas')?.errors">
+        Escolha uma opção
+      </mat-error>
+    </mat-form-field>
+
+    <div class="observacoes-section">
+      <h3>Observações</h3>
+      <mat-checkbox color="primary" formControlName="termsAccepted1">Declaro ciencia e concordancia que não é permitido levar pessoas não convidadas previamente ao casamento.</mat-checkbox>
+      <mat-checkbox >Declaro que irei me divertir e criar memórias inesqueciveis.</mat-checkbox>
+    </div>
+
+
+    <div class="btn-enviar">
+      <button mat-raised-button type="submit">CONFIRMAR PRESENÇA</button>
+    </div>
+  </form>
+</section>
