@@ -27,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule } from '@angular/material/radio';
 import { MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxModule } from '@angular/material/checkbox';
+import { EnderecoComponent } from './pages/endereco/endereco.component';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -39,6 +40,7 @@ registerLocaleData(ptBr);
     CardPresenteComponent,
     ModalPixComponent,
     PresencaComponent,
+    EnderecoComponent,
   ],
   imports: [
     BrowserModule,
