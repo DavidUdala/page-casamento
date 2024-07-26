@@ -29,6 +29,9 @@ import { MAT_RADIO_DEFAULT_OPTIONS, MatRadioModule } from '@angular/material/rad
 import { MAT_CHECKBOX_DEFAULT_OPTIONS, MatCheckboxModule } from '@angular/material/checkbox';
 import { EnderecoComponent } from './pages/endereco/endereco.component';
 
+import { GoogleMapsModule } from '@angular/google-maps';
+import { BotaoComIconeComponent } from './componentes/shared/botao-com-icone/botao-com-icone.component';
+
 registerLocaleData(ptBr);
 @NgModule({
   declarations: [
@@ -41,6 +44,7 @@ registerLocaleData(ptBr);
     ModalPixComponent,
     PresencaComponent,
     EnderecoComponent,
+    BotaoComIconeComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,8 @@ registerLocaleData(ptBr);
     ReactiveFormsModule,
     MatRadioModule,
     FormsModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    GoogleMapsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

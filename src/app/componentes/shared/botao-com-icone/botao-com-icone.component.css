@@ -1,0 +1,33 @@
+/* Estilo do botão FAB */
+.mat-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Estilo do ícone */
+.fab-icon {
+  width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: 24px;
+}
+
+
+.btn-rounded {
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  border-radius: 50%; /* Faz o botão ficar arredondado */
+  overflow: hidden; /* Garante que o conteúdo não ultrapasse o botão */
+  border: none; /* Remove a borda padrão */
+  padding: 0; /* Remove o padding padrão */
+  cursor: pointer; /* Cursor em forma de mão */
+  display: flex; /* Usa flexbox para alinhar o SVG no centro */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background: transparent; /* Fundo transparente para o botão */
+}
+.btn-rounded img {
+  width: 100%; /* Faz a imagem preencher o botão */
+  height: 100%; /* Faz a imagem preencher o botão */
+  object-fit: cover; /* Cobre a área do botão */
+}

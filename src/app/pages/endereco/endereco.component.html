@@ -1,1 +1,35 @@
-<p>endereco works!</p>
+<h2 class="titulo">Informações do Local</h2>
+<section class="container">
+  <div class="location-info">
+    <span><strong>Nome:</strong> Espaço Prih Quirino</span>
+    <span
+      ><strong>Endereço:</strong>R. Dr. Armando Brandão, 48 - Vila Matilde, São
+      Paulo - SP, 03513-020</span
+    >
+    <span><strong>Horário:</strong>16:00 às 22:00.</span>
+  </div>
+
+  <div class="map-container">
+    <!-- <google-map
+      [center]="{ lat: lat, lng: lng }"
+      [zoom]="20"
+      [width]="mapWidth"
+    > -->
+
+    <google-map
+      [center]="{ lat: lat, lng: lng }"
+      [zoom]="20"
+      [width]="mapWidth"
+    >
+      <map-marker
+        [position]="{ lat: lat, lng: lng }"
+        [title]="'Localização do Salão'"
+      ></map-marker>
+    </google-map>
+  </div>
+  <div class="map-actions">
+    <app-botao-com-icone path="assets/imagens/google_gps_location_map_icon.svg"></app-botao-com-icone>
+    <app-botao-com-icone path="assets/imagens/waze_icon.svg"></app-botao-com-icone>
+  </div>
+</section>
+
