@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class PresencaComponent implements OnInit {
   confirmationForm!: FormGroup ;
+  isSubmitted = false;
 
   constructor(private fb: FormBuilder) {
   }
@@ -16,15 +17,16 @@ export class PresencaComponent implements OnInit {
     this.confirmationForm = this.fb.group({
       name: ['', Validators.required],
       attendance: ['', Validators.required],
-      comparecera: ['', Validators.required],
+      comparecera: ['true', Validators.required],
       quantidadeAdultos: ['', Validators.required],
       quantidadeCriancas: ['', Validators.required],
-      termsAccepted1: ['', Validators.required],
-      termsAccepted2: ['', Validators.required],
+      termsAccepted1: [false, Validators.requiredTrue],
+      termsAccepted2: [false, Validators.requiredTrue],
     });
   }
 
   onSubmit() {
+    this.isSubmitted = true;
     if (this.confirmationForm.valid) {
       this.openWhatsApp();
     }

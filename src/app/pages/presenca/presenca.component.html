@@ -10,13 +10,15 @@
       </mat-error>
     </mat-form-field>
 
-
     <p>Comparecerá ao casamento?</p>
-    <mat-radio-group formControlName="comparecera" aria-label="Select an option">
+    <mat-radio-group
+      formControlName="comparecera"
+      aria-label="Select an option"
+      required
+    >
       <mat-radio-button value="true">Sim</mat-radio-button>
       <mat-radio-button value="false">Não</mat-radio-button>
     </mat-radio-group>
-
 
     <mat-form-field appearance="outline">
       <mat-label>Quantidade de adultos, incluindo voce:</mat-label>
@@ -46,10 +48,19 @@
       </mat-error>
     </mat-form-field>
 
-      <h3>Observações</h3>
-      <mat-checkbox color="primary" formControlName="termsAccepted1">Declaro ciencia e concordancia que não é permitido levar pessoas não convidadas previamente ao casamento.</mat-checkbox>
-      <mat-checkbox >Declaro que irei me divertir e criar memórias inesqueciveis.</mat-checkbox>
-
+    <h3>Observações</h3>
+      <mat-checkbox color="primary" formControlName="termsAccepted1"
+        >Declaro ciencia e concordancia que não é permitido levar pessoas não
+        convidadas previamente ao casamento.</mat-checkbox>
+        <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted1')?.invalid">
+          Declaração obrigatória
+        </mat-error>
+    <mat-checkbox formControlName="termsAccepted2"
+      >Declaro que irei me divertir e criar memórias
+      inesqueciveis.</mat-checkbox>
+    <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted2')?.invalid">
+      Declaração obrigatória
+    </mat-error>
 
     <div class="btn-enviar">
       <button mat-raised-button type="submit">CONFIRMAR PRESENÇA</button>

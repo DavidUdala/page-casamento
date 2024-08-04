@@ -16,19 +16,16 @@ export class BotaoComIconeComponent {
   aplicativos: AplicativosDictionary = {
     Waze: `https://www.waze.com/ul?ll=${this.lat},${this.lng}&navigate=yes`,
     GoogleMaps: `https://www.google.com/maps?q=${this.lat},${this.lng}`,
-    // Uber: `https://www.uber.com/ul/?dropoff[latitude]=${this.lat}&dropoff[longitude]=${this.lng}`
     Uber: `uber://?action=setPickup&pickup=my_location&dropoff[latitude]=${this.lat}&dropoff[longitude]=${this.lng}`
   }
 
-  handleClick() {
-    var url = this.aplicativos[this.tipoAplicativo];
+  click() {
+    let url = this.aplicativos[this.tipoAplicativo];
     if (url == undefined) {
       console.error('Aplicativo Não existe');
       return;
     }
-
     window.open(url, '_blank');
-
   }
 }
 
