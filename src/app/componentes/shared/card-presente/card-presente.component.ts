@@ -9,6 +9,9 @@ import { ModalPixComponent } from '../modal-pix/modal-pix.component';
 })
 export class CardPresenteComponent {
   @Input() preco: number = 0;
+  @Input() urlImg: string = '';
+  @Input() descricaoPresente: string = '';
+  @Input() tituloPresente: string = '';
   constructor(public dialog: MatDialog) { }
 
   openModalPix() {
