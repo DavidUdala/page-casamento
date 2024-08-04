@@ -31,6 +31,8 @@ import { EnderecoComponent } from './pages/endereco/endereco.component';
 
 import { GoogleMapsModule } from '@angular/google-maps';
 import { BotaoComIconeComponent } from './componentes/shared/botao-com-icone/botao-com-icone.component';
+import { BotaoCopiarComponent } from './componentes/shared/botao-copiar/botao-copiar.component';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 registerLocaleData(ptBr);
 @NgModule({
@@ -45,6 +47,7 @@ registerLocaleData(ptBr);
     PresencaComponent,
     EnderecoComponent,
     BotaoComIconeComponent,
+    BotaoCopiarComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ registerLocaleData(ptBr);
     MatRadioModule,
     FormsModule,
     MatCheckboxModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    ClipboardModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
