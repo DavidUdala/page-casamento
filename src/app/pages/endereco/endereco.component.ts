@@ -18,15 +18,6 @@ export class EnderecoComponent implements OnInit {
     this.updateMapWidth();
   }
 
-  openInMaps() {
-    const url = `https://www.google.com/maps?q=${this.lat},${this.lng}`;
-    window.open(url, '_blank');
-  }
-
-  openInWaze() {
-    const url = `https://www.waze.com/ul?ll=${this.lat},${this.lng}&navigate=yes`;
-    window.open(url, '_blank');
-  }
 
   private updateMapWidth() {
     if (window.innerWidth > 768) {

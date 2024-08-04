@@ -10,12 +10,6 @@
   </div>
 
   <div class="map-container">
-    <!-- <google-map
-      [center]="{ lat: lat, lng: lng }"
-      [zoom]="20"
-      [width]="mapWidth"
-    > -->
-
     <google-map
       [center]="{ lat: lat, lng: lng }"
       [zoom]="20"
@@ -28,8 +22,9 @@
     </google-map>
   </div>
   <div class="map-actions">
-    <app-botao-com-icone path="assets/imagens/google_gps_location_map_icon.svg"></app-botao-com-icone>
-    <app-botao-com-icone path="assets/imagens/waze_icon.svg"></app-botao-com-icone>
+    <app-botao-com-icone path="assets/imagens/google_gps_location_map_icon.svg" tipoAplicativo="GoogleMaps"></app-botao-com-icone>
+    <app-botao-com-icone path="assets/imagens/waze_icon.svg" tipoAplicativo="Waze"></app-botao-com-icone>
+    <app-botao-com-icone path="assets/imagens/uber_icon.svg" tipoAplicativo="Uber"></app-botao-com-icone>
   </div>
 </section>
 
