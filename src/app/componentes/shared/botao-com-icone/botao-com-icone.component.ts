@@ -16,7 +16,8 @@ export class BotaoComIconeComponent {
   aplicativos: AplicativosDictionary = {
     Waze: `https://www.waze.com/ul?ll=${this.lat},${this.lng}&navigate=yes`,
     GoogleMaps: `https://www.google.com/maps?q=${this.lat},${this.lng}`,
-    Uber: `https://www.uber.com/ul/?dropoff[latitude]=${this.lat}&dropoff[longitude]=${this.lng}`
+    // Uber: `https://www.uber.com/ul/?dropoff[latitude]=${this.lat}&dropoff[longitude]=${this.lng}`
+    Uber: `uber://?action=setPickup&pickup=my_location&dropoff[latitude]=${this.lat}&dropoff[longitude]=${this.lng}`
   }
 
   handleClick() {
