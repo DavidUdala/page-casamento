@@ -37,6 +37,7 @@
     <mat-form-field appearance="outline">
       <mat-label>Quantidade de crianças:</mat-label>
       <mat-select formControlName="quantidadeCriancas" required>
+        <mat-option value="0">0</mat-option>
         <mat-option value="1">1</mat-option>
         <mat-option value="2">2</mat-option>
         <mat-option value="3">3</mat-option>
@@ -50,14 +51,12 @@
 
     <h3>Observações</h3>
       <mat-checkbox color="primary" formControlName="termsAccepted1"
-        >Declaro ciencia e concordancia que não é permitido levar pessoas não
-        convidadas previamente ao casamento.</mat-checkbox>
+        >Declaro ciência e concordância que não é permitido levar pessoas não convidadas previamente ao casamento.</mat-checkbox>
         <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted1')?.invalid">
           Declaração obrigatória
         </mat-error>
-    <mat-checkbox formControlName="termsAccepted2"
-      >Declaro que irei me divertir e criar memórias
-      inesqueciveis.</mat-checkbox>
+    <mat-checkbox color="primary" formControlName="termsAccepted2"
+      >Declaro que irei me divertir e criar memórias inesquecíveis.</mat-checkbox>
     <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted2')?.invalid">
       Declaração obrigatória
     </mat-error>
