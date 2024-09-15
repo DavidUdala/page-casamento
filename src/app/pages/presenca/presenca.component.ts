@@ -24,9 +24,7 @@ export class PresencaComponent implements OnInit {
       quantidadeCriancas: ['', Validators.required],
       termsAccepted1: [false, Validators.requiredTrue],
       termsAccepted2: [false, Validators.requiredTrue],
-      termsAccepted3: [false, Validators.requiredTrue],
     });
-
     this.confirmationForm.get('comparecera')?.valueChanges.subscribe(value => {
       this.comparecera = value;
       if (this.comparecera == "true") {
