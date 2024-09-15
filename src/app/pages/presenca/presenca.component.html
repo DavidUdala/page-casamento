@@ -1,5 +1,4 @@
 <h3 class="titulo">CONFIRMAÇÃO DE PRESENÇA</h3>
-
 <section class="container">
   <form [formGroup]="confirmationForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="fill">
@@ -55,11 +54,21 @@
         >Declaro ciência e concordância que não é permitido levar pessoas não
         convidadas previamente ao casamento.</mat-checkbox
       >
+
       <mat-error
         *ngIf="isSubmitted && confirmationForm.get('termsAccepted1')?.invalid"
       >
         Declaração obrigatória
       </mat-error>
+      <mat-checkbox color="primary" formControlName="termsAccepted4"
+        >Estou ciente que não devo comparecer de calça jeans, moletom, shorts,
+        vestido branco ou cores muito claras, pois esse é um evento com
+        vestimenta Esporte Fino.
+      </mat-checkbox>
+      <mat-error
+        *ngIf="isSubmitted && confirmationForm.get('termsAccepted4')?.invalid"
+        >Declaração obrigatória</mat-error
+      >
       <mat-checkbox color="primary" formControlName="termsAccepted2"
         >Declaro que irei me divertir e criar memórias
         inesquecíveis.</mat-checkbox

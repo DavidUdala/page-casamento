@@ -24,6 +24,7 @@ export class PresencaComponent implements OnInit {
       quantidadeCriancas: ['', Validators.required],
       termsAccepted1: [false, Validators.requiredTrue],
       termsAccepted2: [false, Validators.requiredTrue],
+      termsAccepted4: [false, Validators.requiredTrue],
     });
     this.confirmationForm.get('comparecera')?.valueChanges.subscribe(value => {
       this.comparecera = value;
@@ -63,7 +64,7 @@ export class PresencaComponent implements OnInit {
     }
 
     msg += ` ,gostaria de confirmar minha presença`
-    msg += ` e de mais ${this.confirmationForm.get('quantidadeAdultos')?.value - 1} adulto(s)`
+    msg += ` e de mais ${this.confirmationForm.get('quantidadeAdultos')?.value} adulto(s)`
     msg += ` e ${this.confirmationForm.get('quantidadeCriancas')?.value} criança(s).`
 
     return msg;
@@ -71,24 +72,27 @@ export class PresencaComponent implements OnInit {
 
 
   ativarValidacoesConteudoA(ativa: boolean) {
-    console.log('ativaValidacaoA', ativa );
     if (ativa) {
       this.confirmationForm.get('quantidadeAdultos')?.setValidators([Validators.required]);
       this.confirmationForm.get('quantidadeCriancas')?.setValidators([Validators.required]);
       this.confirmationForm.get('termsAccepted1')?.setValidators([Validators.requiredTrue]);
       this.confirmationForm.get('termsAccepted2')?.setValidators([Validators.requiredTrue]);
+      this.confirmationForm.get('termsAccepted4')?.setValidators([Validators.requiredTrue]);
 
     } else {
       this.confirmationForm.get('quantidadeAdultos')?.clearValidators();
       this.confirmationForm.get('quantidadeCriancas')?.clearValidators();
       this.confirmationForm.get('termsAccepted1')?.clearValidators();
       this.confirmationForm.get('termsAccepted2')?.clearValidators();
+      this.confirmationForm.get('termsAccepted4')?.clearValidators();
+
     }
 
     this.confirmationForm.get('quantidadeAdultos')?.updateValueAndValidity();
     this.confirmationForm.get('quantidadeCriancas')?.updateValueAndValidity();
     this.confirmationForm.get('termsAccepted1')?.updateValueAndValidity();
     this.confirmationForm.get('termsAccepted2')?.updateValueAndValidity();
+    this.confirmationForm.get('termsAccepted4')?.updateValueAndValidity();
   }
 
   ativarValidacoesConteudoB(ativa: boolean) {
