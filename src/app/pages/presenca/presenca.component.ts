@@ -57,15 +57,13 @@ export class PresencaComponent implements OnInit {
   textoConfirmacaoPresenca(): string {
     let msg = `Olá, me chamo ${this.confirmationForm.get('name')?.value}`;
 
-    console.log(this.confirmationForm.get('comparecera')?.value);
-
     if (this.confirmationForm.get('comparecera')?.value != 'true') {
       msg += ` ,infelizmente não poderei comparecer ao casamento.`
       return msg;
     }
 
     msg += ` ,gostaria de confirmar minha presença`
-    msg += ` e de mais ${this.confirmationForm.get('quantidadeAdultos')?.value} adulto(s)`
+    msg += ` e de mais ${this.confirmationForm.get('quantidadeAdultos')?.value -1} adulto(s)`
     msg += ` e ${this.confirmationForm.get('quantidadeCriancas')?.value} criança(s).`
 
     return msg;
