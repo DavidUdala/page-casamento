@@ -4,7 +4,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { PresentesComponent } from './pages/presentes/presentes.component';
 import { PresencaComponent } from './pages/presenca/presenca.component';
 import { EnderecoComponent } from './pages/endereco/endereco.component';
-
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 const routes: Routes = [
   { path: '', component: InicioComponent },
@@ -16,6 +16,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
 })
 export class AppRoutingModule { }
