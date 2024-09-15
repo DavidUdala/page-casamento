@@ -12,9 +12,17 @@ export class CardPresenteComponent {
   @Input() urlImg: string = '';
   @Input() descricaoPresente: string = '';
   @Input() tituloPresente: string = '';
+  @Input() pathImgQrCode : string= '';
+  @Input() pixCopyPaste : string = '';
+
   constructor(public dialog: MatDialog) { }
 
-  openModalPix() {
-    this.dialog.open(ModalPixComponent);
+  openModalPix(pathImgQrCode: string, pixCopyPaste : string) {
+    this.dialog.open(ModalPixComponent, {
+      data:{
+        pathImgQrCode,
+        pixCopyPaste
+      }
+    });
   }
 }

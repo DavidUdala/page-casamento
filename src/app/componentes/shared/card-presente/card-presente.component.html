@@ -1,7 +1,7 @@
 <div class="card">
   <mat-card class="teste">
     <mat-card-header>
-      <mat-card-title class="titulo"> {{tituloPresente}} </mat-card-title>
+      <mat-card-title class="titulo"> {{ tituloPresente }} </mat-card-title>
     </mat-card-header>
     <img mat-card-image src="{{ urlImg }}" width="300px" height="200px" />
     <mat-card-content>
@@ -12,7 +12,7 @@
     <mat-card-actions>
       <p class="card-preco">{{ preco | currency : "BRL" }}</p>
       <button
-        (click)="openModalPix()"
+        (click)="openModalPix(pathImgQrCode, pixCopyPaste)"
         class="button-montserrat"
         mat-raised-button
       >
