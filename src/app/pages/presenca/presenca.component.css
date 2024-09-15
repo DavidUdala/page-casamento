@@ -13,8 +13,24 @@
   font-size: 20px;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  margin-top: 20%;
 
+}
+@media screen and (max-width: 600px) {
+  .titulo{
+    margin-top: 20%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .titulo{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .titulo{
+    margin-top: 5%;
+  }
 }
 
 

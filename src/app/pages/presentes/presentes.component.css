@@ -4,7 +4,23 @@
   font-size: 24px;
   font-weight: 800;
   font-family: "Montserrat", sans-serif;
-  margin-top: 20%;
+}
+@media screen and (max-width: 600px) {
+  .presentes_titulo{
+    margin-top: 20%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .presentes_titulo{
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .presentes_titulo{
+    margin-top: 5%;
+  }
 }
 
 .container {
