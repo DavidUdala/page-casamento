@@ -20,49 +20,72 @@
       <mat-radio-button value="false">Não</mat-radio-button>
     </mat-radio-group>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Quantidade de adultos, incluindo voce:</mat-label>
-      <mat-select formControlName="quantidadeAdultos" required>
-        <mat-option value="1">1</mat-option>
-        <mat-option value="2">2</mat-option>
-        <mat-option value="3">3</mat-option>
-        <mat-option value="4">4</mat-option>
-        <mat-option value="5">5</mat-option>
-      </mat-select>
-      <mat-error *ngIf="confirmationForm.get('quantidadeAdultos')?.errors">
-        Escolha uma opção
-      </mat-error>
-    </mat-form-field>
-
-    <mat-form-field appearance="outline">
-      <mat-label>Quantidade de crianças:</mat-label>
-      <mat-select formControlName="quantidadeCriancas" required>
-        <mat-option value="0">0</mat-option>
-        <mat-option value="1">1</mat-option>
-        <mat-option value="2">2</mat-option>
-        <mat-option value="3">3</mat-option>
-        <mat-option value="4">4</mat-option>
-        <mat-option value="5">5</mat-option>
-      </mat-select>
-      <mat-error *ngIf="confirmationForm.get('quantidadeCriancas')?.errors">
-        Escolha uma opção
-      </mat-error>
-    </mat-form-field>
-
-    <h3>Observações</h3>
-      <mat-checkbox color="primary" formControlName="termsAccepted1"
-        >Declaro ciência e concordância que não é permitido levar pessoas não convidadas previamente ao casamento.</mat-checkbox>
-        <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted1')?.invalid">
-          Declaração obrigatória
+    <ng-template #conteudoA>
+      <mat-form-field appearance="outline">
+        <mat-label>Quantidade de adultos, incluindo voce:</mat-label>
+        <mat-select formControlName="quantidadeAdultos" required>
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+        </mat-select>
+        <mat-error *ngIf="confirmationForm.get('quantidadeAdultos')?.errors">
+          Escolha uma opção
         </mat-error>
-    <mat-checkbox color="primary" formControlName="termsAccepted2"
-      >Declaro que irei me divertir e criar memórias inesquecíveis.</mat-checkbox>
-    <mat-error *ngIf="isSubmitted && confirmationForm.get('termsAccepted2')?.invalid">
-      Declaração obrigatória
-    </mat-error>
+      </mat-form-field>
 
+      <mat-form-field appearance="outline">
+        <mat-label>Quantidade de crianças:</mat-label>
+        <mat-select formControlName="quantidadeCriancas" required>
+          <mat-option value="0">0</mat-option>
+          <mat-option value="1">1</mat-option>
+          <mat-option value="2">2</mat-option>
+          <mat-option value="3">3</mat-option>
+          <mat-option value="4">4</mat-option>
+          <mat-option value="5">5</mat-option>
+        </mat-select>
+        <mat-error *ngIf="confirmationForm.get('quantidadeCriancas')?.errors">
+          Escolha uma opção
+        </mat-error>
+      </mat-form-field>
+
+      <h3>Observações</h3>
+      <mat-checkbox color="primary" formControlName="termsAccepted1"
+        >Declaro ciência e concordância que não é permitido levar pessoas não
+        convidadas previamente ao casamento.</mat-checkbox
+      >
+      <mat-error
+        *ngIf="isSubmitted && confirmationForm.get('termsAccepted1')?.invalid"
+      >
+        Declaração obrigatória
+      </mat-error>
+      <mat-checkbox color="primary" formControlName="termsAccepted2"
+        >Declaro que irei me divertir e criar memórias
+        inesquecíveis.</mat-checkbox
+      >
+      <mat-error
+        *ngIf="isSubmitted && confirmationForm.get('termsAccepted2')?.invalid"
+      >
+        Declaração obrigatória
+      </mat-error>
+    </ng-template>
+
+    <ng-template #conteudoB>
+      <h3>Observações</h3>
+      <mat-checkbox color="primary" formControlName="termsAccepted3"
+        >Estou ciente que irei perder momentos inesquecíveis.</mat-checkbox
+      >
+      <mat-error
+        *ngIf="isSubmitted && confirmationForm.get('termsAccepted3')?.invalid"
+      >
+        Declaração obrigatória
+      </mat-error>
+    </ng-template>
+
+    <div *ngIf="comparecera == 'true'; then conteudoA; else conteudoB"></div>
     <div class="btn-enviar">
-      <button mat-raised-button type="submit">CONFIRMAR PRESENÇA</button>
+      <button mat-raised-button type="submit">CONFIRMAR</button>
     </div>
   </form>
 </section>
